@@ -96,6 +96,7 @@ void insertAtStart()
     }
 }
 
+//Function for inserting data in the middle
 void insertInMiddle()
 {
     int location, len;
@@ -138,6 +139,7 @@ void insertInMiddle()
     }
 }
 
+//Function for inserting data at end
 void insertAtEnd()
 {
     struct node *temp;
@@ -182,6 +184,7 @@ int length()
     return count;
 }
 
+//Function for deleting node from a specified location
 void delete ()
 {
     int location, len;
@@ -233,6 +236,7 @@ void delete ()
     display();
 }
 
+//Function for displaying the data 
 void display()
 {
     struct node *temp;
