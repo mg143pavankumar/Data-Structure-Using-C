@@ -1,3 +1,7 @@
+/*
+    C program to implement a Queue using an linked list
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
