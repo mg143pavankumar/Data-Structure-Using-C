@@ -92,13 +92,13 @@ void insertAtEnd()
 
 ### Inserting At Specific location in the list (After a Node)
 We can use the following steps to insert a new node after a node in the single linked list...
-+ Step 1: Create a newNode with given value.
-+ Step 2: Check whether list is Empty (root == NULL)
-+ Step 3: If it is Empty then, set newNode -> next = NULL and root = newNode.
-+ Step 4: If it is Not Empty then, define a node pointer temp and initialize with root.
-+ Step 5: Keep moving the temp to its next node until it reaches to the node after which we want to insert the newNode (until temp1 -> data is equal to location, here location is the node value after which we want to insert the newNode).
-+ Step 6: Every time check whether temp is reached to last node or not. If it is reached to last node then display 'Given node is not found in the list!!! Insertion not possible!!!' and terminate the function. Otherwise move the temp to next node.
-+ Step 7: Finally, Set 'newNode -> next = temp -> next' and 'temp -> next = newNode'
++ Step 1: Create a function for finding lenght of a node.
++ Step 2: Get the location from the user where they want to insert the node.
++ Step 3: Check whether the location is not greater than node length.
++ Step 4: If it is Not then,  get the data from user and make temp -> next = NULL.
++ Step 5: define a pointer **p** and initilize to __root__.
++ Step 6: Keep moving the __p__ to its next node until it reaches to the specified location (until i < location).
++ Step 7: Finally, Set 'temp -> next = p -> next' and 'p -> next = temp'
 
 ### Implementation is shown below.
 ```
