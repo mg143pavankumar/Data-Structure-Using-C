@@ -185,19 +185,90 @@ We can use the following steps to delete a node from end of the single linked li
 
 ### Deleting a Specific Node from the list
 We can use the following steps to delete a specific node from the single linked list...
-    • Step 1: Check whether list is Empty (root == NULL)
-    • Step 2: If it is Empty then, display 'List is Empty!!! Deletion is not possible' and terminate the function.
-    • Step 3: If it is Not Empty then, define two Node pointers 'temp1' and 'temp2' and initialize 'temp1' with root.
-    • Step 4: Keep moving the temp1 until it reaches to the exact node to be deleted or to the last node. And every time set 'temp2 = temp1' before moving the 'temp1' to its next node.
-    • Step 5: If it is reached to the last node then display 'Given node not found in the list! Deletion not possible!!!'. And terminate the function.
-    • Step 6: If it is reached to the exact node which we want to delete, then check whether list is having only one node or not
-    • Step 7: If list has only one node and that is the node to be deleted, then set root = NULL and delete temp1 (free(temp1)).
-    • Step 8: If list contains multiple nodes, then check whether temp1 is the first node in the list (temp1 == root).
-    • Step 9: If temp1 is the first node then move the root to the next node (root = root → next) and delete temp1.
-    • Step 10: If temp1 is not first node then check whether it is last node in the list (temp1 → next == NULL).
-    • Step 11: If temp1 is last node then set temp2 → next = NULL and delete temp1 (free(temp1)).
-    • Step 12: If temp1 is not first node and not last node then set temp2 → next = temp1 → next and delete temp1 (free(temp1)).
++ Step 1: Check whether list is Empty (root == NULL)
++ Step 2: If it is Empty then, display 'List is Empty!!! Deletion is not possible' and terminate the function.
++ Step 3: If it is Not Empty then, define two Node pointers 'temp1' and 'temp2' and initialize 'temp1' with root.
++ Step 4: Keep moving the temp1 until it reaches to the exact node to be deleted or to the last node. And every time set 'temp2 = temp1' before moving the 'temp1' to its next node.
++ Step 5: If it is reached to the last node then display 'Given node not found in the list! Deletion not possible!!!'. And terminate the function.
++ Step 6: If it is reached to the exact node which we want to delete, then check whether list is having only one node or not
++ Step 7: If list has only one node and that is the node to be deleted, then set root = NULL and delete temp1 (free(temp1)).
++ Step 8: If list contains multiple nodes, then check whether temp1 is the first node in the list (temp1 == root).
++ Step 9: If temp1 is the first node then move the root to the next node (root = root → next) and delete temp1.
++ Step 10: If temp1 is not first node then check whether it is last node in the list (temp1 → next == NULL).
++ Step 11: If temp1 is last node then set temp2 → next = NULL and delete temp1 (free(temp1)).
++ Step 12: If temp1 is not first node and not last node then set temp2 → next = temp1 → next and delete temp1 (free(temp1)).
     
+    
+### Implementation is shown below.
+
+```
+
+//Function for finding the length of the node
+int length()
+{
+    int count = 0;
+
+    struct node *temp;
+    temp = root;
+
+    while (temp != NULL)
+    {
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
+
+
+void delete ()
+{
+    int location, len;
+    printf("Enter the location of node to be deleted: ");
+    scanf("%d", &location);
+
+    len = length();
+
+    if (location > len)
+    {
+        printf("Invalid locaiton...!!!");
+    }
+    else if (location == 1)
+    {
+        struct node *temp;
+        temp = root;
+  
+        if (temp->next == NULL)
+        {
+            root = NULL;
+        }
+        else
+        {
+            root = temp->next;
+            temp->next = NULL;
+            free(temp);
+        }
+    }
+    else
+    {
+        struct node *p, *q;
+        p = root;
+
+        int i = 1;
+        while (i < location - 1)
+        {
+            p = p->next;
+            i++;
+        }
+
+        q = p->next;
+        p->next = q->next;
+        q->next = NULL;
+        free(q);
+    }
+    display();
+}
+
+```
     
 ### Displaying a Single Linked List
 We can use the following steps to display the elements of a single linked list...
@@ -206,3 +277,27 @@ We can use the following steps to display the elements of a single linked list..
 + Step 3: If it is Not Empty then, define a Node pointer 'temp' and initialize with root.
 + Step 4: Keep displaying temp -> data with an arrow (--->) until temp reaches to the last node
 + Step 5: Finally display temp ->data with arrow pointing to NULL (temp -> data ---> NULL).
+
+### Implementation is shown below.
+```
+void display()
+{
+    struct node *temp;
+    temp = root;
+
+    if (temp == NULL)
+    {
+        printf("List is empty");
+    }
+    else
+    {
+        int len = length();
+        printf("Length of list:=> %d\n", len);
+        while (temp != NULL)
+        {
+            printf("%d => ", temp->data);
+            temp = temp->next;
+        }
+    }
+}
+```
