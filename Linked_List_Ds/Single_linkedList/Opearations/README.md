@@ -156,29 +156,34 @@ void insertInMiddle()
 
 ```
 
-### Deletion
+### Deletion of a node at a specified location
 In a single linked list, the deletion operation can be performed in three ways. They are as follows...
-    1. Deleting from Beginning of the list
-    2. Deleting from End of the list
-    3. Deleting a Specific Node
-Deleting from Beginning of the list
++ Deleting from Beginning of the list
++ Deleting from End of the list
++ Deleting a Specific Node
+
+### Deleting from Beginning of the list
 We can use the following steps to delete a node from beginning of the single linked list...
-    • Step 1: Check whether list is Empty (root == NULL)
-    • Step 2: If it is Empty then, display 'List is Empty!!! Deletion is not possible' and terminate the function.
-    • Step 3: If it is Not Empty then, define a Node pointer 'temp' and initialize with root.
-    • Step 4: Check whether list is having only one node (temp → next == NULL)
-    • Step 5: If it is TRUE then set root = NULL and delete temp (Setting Empty list conditions)
-    • Step 6: If it is FALSE then set root = temp → next, and delete temp.
-Deleting from End of the list
++ Step 1: Check whether list is Empty (root == NULL)
++ Step 2: If it is Empty then, display 'List is Empty!!! Deletion is not possible' and terminate the function.
++ Step 3: If it is Not Empty then, define a Node pointer 'temp' and initialize with root.
++ Step 4: Check whether list is having only one node (temp -> next == NULL)
++ Step 5: If it is TRUE then set root = NULL and delete temp (Setting Empty list conditions)
++ Step 6: If it is FALSE then set root = temp -> next, and delete temp.
+
+
+### Deleting from End of the list
 We can use the following steps to delete a node from end of the single linked list...
-    • Step 1: Check whether list is Empty (root == NULL)
-    • Step 2: If it is Empty then, display 'List is Empty!!! Deletion is not possible' and terminate the function.
-    • Step 3: If it is Not Empty then, define two Node pointers 'temp1' and 'temp2' and initialize 'temp1' with root.
-    • Step 4: Check whether list has only one Node (temp1 → next == NULL)
-    • Step 5: If it is TRUE. Then, set root = NULL and delete temp1. And terminate the function. (Setting Empty list condition)
-    • Step 6: If it is FALSE. Then, set 'temp2 = temp1 ' and move temp1 to its next node. Repeat the same until it reaches to the last node in the list. (until temp1 → next == NULL)
-    • Step 7: Finally, Set temp2 → next = NULL and delete temp1.
-Deleting a Specific Node from the list
++ Step 1: Check whether list is Empty (root == NULL)
++ Step 2: If it is Empty then, display 'List is Empty!!! Deletion is not possible' and terminate the function.
++ Step 3: If it is Not Empty then, define two Node pointers 'temp1' and 'temp2' and initialize 'temp1' with root.
++ Step 4: Check whether list has only one Node (temp1 -> next == NULL)
++ Step 5: If it is TRUE. Then, set root = NULL and delete temp1. And terminate the function. (Setting Empty list condition)
++ Step 6: If it is FALSE. Then, set 'temp2 = temp1 ' and move temp1 to its next node. Repeat the same until it reaches to the last node in the list. (until temp1 -> next == NULL)
++ Step 7: Finally, Set temp2 -> next = NULL and delete temp1.
+
+
+### Deleting a Specific Node from the list
 We can use the following steps to delete a specific node from the single linked list...
     • Step 1: Check whether list is Empty (root == NULL)
     • Step 2: If it is Empty then, display 'List is Empty!!! Deletion is not possible' and terminate the function.
@@ -192,10 +197,12 @@ We can use the following steps to delete a specific node from the single linked 
     • Step 10: If temp1 is not first node then check whether it is last node in the list (temp1 → next == NULL).
     • Step 11: If temp1 is last node then set temp2 → next = NULL and delete temp1 (free(temp1)).
     • Step 12: If temp1 is not first node and not last node then set temp2 → next = temp1 → next and delete temp1 (free(temp1)).
-Displaying a Single Linked List
+    
+    
+### Displaying a Single Linked List
 We can use the following steps to display the elements of a single linked list...
-    • Step 1: Check whether list is Empty (root == NULL)
-    • Step 2: If it is Empty then, display 'List is Empty!!!' and terminate the function.
-    • Step 3: If it is Not Empty then, define a Node pointer 'temp' and initialize with root.
-    • Step 4: Keep displaying temp → data with an arrow (--->) until temp reaches to the last node
-    • Step 5: Finally display temp → data with arrow pointing to NULL (temp → data ---> NULL).
++ Step 1: Check whether list is Empty (root == NULL)
++ Step 2: If it is Empty then, display 'List is Empty!!!' and terminate the function.
++ Step 3: If it is Not Empty then, define a Node pointer 'temp' and initialize with root.
++ Step 4: Keep displaying temp -> data with an arrow (--->) until temp reaches to the last node
++ Step 5: Finally display temp ->data with arrow pointing to NULL (temp -> data ---> NULL).
