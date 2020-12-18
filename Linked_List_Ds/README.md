@@ -6,3 +6,8 @@
 
 # Single Linked list 
 + Single linked list is a sequence of elements in which every elements has link to its next element in the sequence.
++ In any single linked list, the individual element is called as **"Node"**.
++ Every "Node" contains two fields, **data** and **next**.
++ The **data** field is used to store actual value of the node. 
++ The **next** field is used to store the address of the next node in the sequence.
+```
