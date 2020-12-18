@@ -1,5 +1,5 @@
 /*
-    C program to implement a Queue using an linked list
+    C program to implement a Queue using linked list
 */
 
 #include <stdio.h>
