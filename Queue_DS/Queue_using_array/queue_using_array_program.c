@@ -84,8 +84,7 @@ void enqueue(int value){
         
         rear++;
         Queue[rear] = value;
-        printf("Added => %d", value);
-        
+
     }
     
 }
@@ -118,7 +117,7 @@ void display(){
         printf("Queue elements are:\n");
         for (i = front; i <= rear; i++)
         {
-            printf("%d \n",Queue[i]);
+            printf("%d ",Queue[i]);
         }
         
     }
