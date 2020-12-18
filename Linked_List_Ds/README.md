@@ -10,4 +10,7 @@
 + Every "Node" contains two fields, **data** and **next**.
 + The **data** field is used to store actual value of the node. 
 + The **next** field is used to store the address of the next node in the sequence.
-```
+
+## Graphical representation
+![image](https://user-images.githubusercontent.com/68140538/102629038-a082c780-4170-11eb-8179-7b316d2bf5be.png)
+
