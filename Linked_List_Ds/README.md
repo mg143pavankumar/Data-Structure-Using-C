@@ -14,3 +14,7 @@
 ## Graphical representation
 ![image](https://user-images.githubusercontent.com/68140538/102629038-a082c780-4170-11eb-8179-7b316d2bf5be.png)
 
+> In a single linked list, the address of the first field is always stored in a reference node know as __"front"__ or __"root"__.
+> Always next part (reference part) of the last node must be NULL.
+
+
