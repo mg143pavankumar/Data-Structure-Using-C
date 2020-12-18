@@ -193,10 +193,10 @@ We can use the following steps to delete a specific node from the single linked 
 + Step 6: If it is reached to the exact node which we want to delete, then check whether list is having only one node or not
 + Step 7: If list has only one node and that is the node to be deleted, then set root = NULL and delete temp1 (free(temp1)).
 + Step 8: If list contains multiple nodes, then check whether temp1 is the first node in the list (temp1 == root).
-+ Step 9: If temp1 is the first node then move the root to the next node (root = root → next) and delete temp1.
-+ Step 10: If temp1 is not first node then check whether it is last node in the list (temp1 → next == NULL).
-+ Step 11: If temp1 is last node then set temp2 → next = NULL and delete temp1 (free(temp1)).
-+ Step 12: If temp1 is not first node and not last node then set temp2 → next = temp1 → next and delete temp1 (free(temp1)).
++ Step 9: If temp1 is the first node then move the root to the next node (root = root -> next) and delete temp1.
++ Step 10: If temp1 is not first node then check whether it is last node in the list (temp1 -> next == NULL).
++ Step 11: If temp1 is last node then set temp2 -> next = NULL and delete temp1 (free(temp1)).
++ Step 12: If temp1 is not first node and not last node then set temp2 -> next = temp1 -> next and delete temp1 (free(temp1)).
     
     
 ### Implementation is shown below.
