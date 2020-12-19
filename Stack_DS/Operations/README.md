@@ -1,4 +1,4 @@
-# Operations on Stack
+# Operations on a Stack
 
 The following operations are performed on the stack...
 1. __Push__ (To insert an element on to the stack)
