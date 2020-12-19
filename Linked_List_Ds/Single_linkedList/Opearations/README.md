@@ -22,10 +22,10 @@ In a single linked list, the insertion operation can be performed in three ways.
 
 ### Inserting At Beginning of the list
 We can use the following steps to insert a new node at beginning of the single linked list...
-+ Step 1: Create a newNode with given value.
-+ Step 2: Check whether list is Empty (root == NULL)
-+ Step 3: If it is Empty then, set newNode -> next = NULL and root = newNode.
-+ Step 4: If it is Not Empty then, set newNode -> next = root and root = newNode.
++ Step 1: Create a __temp__ node with given value.
++ Step 2: Check whether list is __Empty__ (root == NULL)
++ Step 3: If it is __Empty__ then, set temp -> next = NULL and root = temp.
++ Step 4: If it is __Not Empty__ then, set temp -> next = root and root = temp.
 
 ### Implementation is shown below
 ```
@@ -53,12 +53,12 @@ void insertAtStart()
     
 ### Inserting At End of the list
 We can use the following steps to insert a new node at end of the single linked list...
-+ Step 1: Create a newNode with given value and newNode -> next as NULL.
-+ Step 2: Check whether list is Empty (root == NULL).
-+ Step 3: If it is Empty then, set root = newNode.
-+ Step 4: If it is Not Empty then, define a node pointer temp and initialize with root.
-+ Step 5: Keep moving the temp to its next node until it reaches to the last node in the list (until temp -> next is equal to NULL).
-+ Step 6: Set temp -> next = newNode.
++ Step 1: Create a __temp__ node with given value and temp -> next as NULL.
++ Step 2: Check whether list is __Empty__ (root == NULL).
++ Step 3: If it is __Empty__ then, set root = temp.
++ Step 4: If it is __Not Empty__ then, define a node pointer **p** and initialize with root.
++ Step 5: Keep moving the **p** to its **next node** until it reaches to the last node in the list (until p -> next is equal to NULL).
++ Step 6: Set __p -> next = temp__.
 
 ### Implementation is shown below.
 ```
