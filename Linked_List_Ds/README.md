@@ -28,3 +28,17 @@ previous element and next element in the sequence.
 + Every node in a double linked list contains __three fields__.
 
 ## Graphical representation
+![image](https://user-images.githubusercontent.com/68140538/102698242-fb481c00-4261-11eb-8ca1-380f8b547d52.png)
+
++ 'link1' field is used to store the address of the previous node in the sequence.
++ 'link2' field is used to store the address of the next node in the sequence
++ 'data' field is used to store the actual value of that node.
+
+![image](https://user-images.githubusercontent.com/68140538/102698245-013dfd00-4262-11eb-9b5f-c9502b38bfb3.png)
+
+
+# Circular Linked List:
++ Circular linked list is a sequence of elements in which every element has link to its next element in the 
+sequence and the last element has a link to the first element in the sequence.
+
+![image](https://user-images.githubusercontent.com/68140538/102698258-17e45400-4262-11eb-9587-cb481ebaa37b.png)
