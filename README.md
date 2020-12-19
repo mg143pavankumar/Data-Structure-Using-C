@@ -27,6 +27,8 @@ Syntax: datatype arrayName[size];
 ### Stack
 + Stack is a linear data structure in which the operations are performed based on __LIFO (Last In First Out) principle__.
 
+![image](https://user-images.githubusercontent.com/68140538/102698610-be315900-4264-11eb-881e-cffa1d713f39.png)
+
 
 # Non-Linear DS
 * Trees
