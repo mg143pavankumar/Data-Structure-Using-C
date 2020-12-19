@@ -185,18 +185,16 @@ We can use the following steps to delete a node from end of the single linked li
 
 ### Deleting a Specific Node from the list
 We can use the following steps to delete a specific node from the single linked list...
-+ Step 1: Check whether list is Empty (root == NULL)
-+ Step 2: If it is Empty then, display 'List is Empty!!! Deletion is not possible' and terminate the function.
-+ Step 3: If it is Not Empty then, define two Node pointers 'temp1' and 'temp2' and initialize 'temp1' with root.
-+ Step 4: Keep moving the temp1 until it reaches to the exact node to be deleted or to the last node. And every time set 'temp2 = temp1' before moving the 'temp1' to its next node.
-+ Step 5: If it is reached to the last node then display 'Given node not found in the list! Deletion not possible!!!'. And terminate the function.
-+ Step 6: If it is reached to the exact node which we want to delete, then check whether list is having only one node or not
-+ Step 7: If list has only one node and that is the node to be deleted, then set root = NULL and delete temp1 (free(temp1)).
-+ Step 8: If list contains multiple nodes, then check whether temp1 is the first node in the list (temp1 == root).
-+ Step 9: If temp1 is the first node then move the root to the next node (root = root -> next) and delete temp1.
-+ Step 10: If temp1 is not first node then check whether it is last node in the list (temp1 -> next == NULL).
-+ Step 11: If temp1 is last node then set temp2 -> next = NULL and delete temp1 (free(temp1)).
-+ Step 12: If temp1 is not first node and not last node then set temp2 -> next = temp1 -> next and delete temp1 (free(temp1)).
++ Step 1: First we create a function to __find length of the node.
++ Step 2: We get the __location__ of the node from the user which they want to delete.
++ Step 3: After getting the location we check whether it is greater than length of the node or not.
++ Step 4: If it __is greater__ than lenght of the node than __display invalid locaiton__.
++ Step 5: else if location = 1, then we create a pointer node _temp_ and initialize to __root__.
+  + Step 5.1: if  __temp -> next == NULL__ then we make __root = NULL__ and free the pointer __temp__.
+  + Step 5.2: else __root = temp -> next__ , __temp -> next = NULL__ and we free the pointer __temp__.
++ Step 6: else if location != 1 then we make a two pointer node __p__ and __q__. (p = root)
+  + Step 6.1: Keep moving the pointer __p__ unless ( i < location - 1)
+  + Step 6.2. After reaching at the location we make q =  p -> next, p -> next = q -> next, q -> next = NULL and free the pointer __q__.
     
     
 ### Implementation is shown below.
@@ -240,6 +238,7 @@ void delete ()
         if (temp->next == NULL)
         {
             root = NULL;
+            free(temp);
         }
         else
         {
