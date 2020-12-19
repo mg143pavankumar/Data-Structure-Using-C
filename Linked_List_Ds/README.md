@@ -19,3 +19,12 @@
 
 ![image](https://user-images.githubusercontent.com/68140538/102630188-3e2ac680-4172-11eb-9e5f-c24e0487a4f0.png)
 
+
+# Double Linked List:
++ Double linked list is a sequence of elements in which every element has links to its
+previous element and next element in the sequence.
++ In double linked list, every node has link to its previous node and next node.
++ so, we can __traverse forward__ by using __next__ field and can __traverse backward__ by using __previous__ field. 
++ Every node in a double linked list contains __three fields__.
+
+## Graphical representation
