@@ -25,10 +25,7 @@ Syntax: datatype arrayName[size];
 ![image](https://user-images.githubusercontent.com/68140538/102630188-3e2ac680-4172-11eb-9e5f-c24e0487a4f0.png)
 
 ### Stack
-+ Stack is a linear data structure in which the insertion and deletion operations are performed at only one end.
-+ In a stack, adding and removing of elements are performed at single position which is known as __"top"__. 
-+ That means, new element is added at top of the stack and an element is removed from the top of the stack.
-+ In stack, the insertion and deletion operations are performed based on __LIFO (Last In First Out) principle.__
++ Stack is a linear data structure in which the operations are performed based on __LIFO (Last In First Out) principle__.
 
 
 # Non-Linear DS
