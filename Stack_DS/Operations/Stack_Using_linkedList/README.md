@@ -5,6 +5,9 @@
 + So, there is no need to fix the size at the beginning of the implementation. 
 + The Stack implemented using linked list can organize as many data values as we want.
 
+![image](https://user-images.githubusercontent.com/68140538/102711503-3c7f1100-42e0-11eb-8e48-fb9e621f244a.png)
+
+
 ### Implementation
 + In linked list implementation of a stack, every new element is inserted as 'top' element.
 + That means every newly inserted element is pointed by 'top'.
