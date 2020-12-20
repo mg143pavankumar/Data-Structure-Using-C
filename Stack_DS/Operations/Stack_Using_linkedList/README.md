@@ -31,6 +31,31 @@ We can use the following steps to insert a new node into the stack...
 + Step 4: If it is __Not Empty__, then set temp -> next = top.
 + Step 5: Finally, set top = temp.
 
+```
+void push()
+{
+    struct stack *temp;
+    temp = (struct stack *)malloc(sizeof(struct stack));
+
+    printf("Enter the data: ");
+    scanf("%d", &temp->data);
+
+    temp->next = NULL;
+
+    //Checking whether the stack is empty or not and if it is then added the data to it
+    if (top == NULL)
+    {
+        top = temp;
+    }
+    else
+    {
+        temp->next = top;
+        top = temp;
+    }
+}
+
+```
+
 ## pop() - Deleting an Element from a Stack
 We can use the following steps to delete a node from the stack...
 + Step 1: Check whether stack is __Empty (top == NULL)__.
@@ -40,6 +65,26 @@ possible!!!"__ and terminate the function.
 + Step 4: Then set __'top = top -> next'.
 + Step 5: Finally, delete 'temp' __(free(temp))__.
 
+```
+void pop()
+{
+    struct stack *temp;
+    temp = top;
+
+    //Checking whether the stack is empty or not and if not then pop the data
+    if (top == NULL)
+    {
+        printf("Stack is empty\n");
+    }
+    else
+    {
+        top = temp->next;
+        temp->next = NULL;
+        free(temp);
+    }
+    display();
+}
+```
 
 ## display() - Displaying stack of elements
 We can use the following steps to display the elements (nodes) of a stack...
@@ -49,3 +94,25 @@ We can use the following steps to display the elements (nodes) of a stack...
 + Step 4: Display __'temp -> data --->'__ and move it to the next node. Repeat the same
 until temp reaches to the first node in the stack (temp -> next != NULL).
 + Step 4: Finally! Display __'temp -> data ---> NULL'__.
+
+```
+
+void display()
+{
+    struct stack *temp;
+    temp = top;
+
+    if (top == NULL)
+    {
+        printf("Stack is empty\n");
+    }
+    else
+    {
+        while (temp != NULL)
+        {
+            printf("%d => ", temp->data);
+            temp = temp->next;
+        }
+    }
+}
+```
