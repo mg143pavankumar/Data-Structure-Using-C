@@ -26,9 +26,89 @@ function calls to perform operation selected by the user on the stack.
 + In a stack, the new element is always inserted at top position.
 + Push function takes one integer value as parameter and inserts that value into the stack.
 
-### Steps for implementing stack of an array
+### Steps to push an element into the stack...
 + Step 1: Check whether stack is FULL. (top == SIZE-1)
 + Step 2: If it is __FULL__, then display "Stack is FULL!!! Insertion is not
 possible!!!" and terminate the function.
 + Step 3: If it is __NOT FULL__, then increment top value by one __(top++)__ and set
 stack[top] to value __(stack[top] = value)__.
+
+```
+void push(int value)
+{
+    if (top == (SIZE - 1))
+    {
+        printf("Stack is full...!!");
+    }
+    else
+    {
+        /* Here we are increasing the top value 
+           and adding data into the stack
+        */
+        top++;
+        stack[top] = value;
+    }
+}
+
+```
+
+## pop() - Delete a value from the Stack
++ In a stack, pop() is a function used to delete an element from the stack.
++ In a stack, the element is always deleted from top position.
++ Pop function does not take any value as parameter.
+
+### Steps to pop an element from the stack...
++ Step 1: Check whether stack is EMPTY. __(top == -1)__
++ Step 2: If it is __EMPTY__, then display "Stack is EMPTY!!! Deletion is not possible!!!" and terminate the function.
++ Step 3: If it is __NOT EMPTY__, then __delete stack[top]__ and __decrement top value by one (top--).
+
+```
+void pop()
+{
+
+    //Cheking wheather the stack is empty or not
+    if (top == -1)
+    {
+        printf("Stack is empty");
+    }
+    else
+    {
+
+        /* Displaying the deleted data and we decreased top value 
+         so that deleted data won't display
+        */
+        printf("deleted => %d\n", stack[top]);
+        top--;
+    }
+}
+
+```
+
+
+## display() - Displays the elements of a Stack
+We can use the following steps to display the elements of a stack...
++ Step 1: Check whether stack is EMPTY. __(top == -1)__
++ Step 2: If it is __EMPTY__, then display "Stack is EMPTY!!!" and terminate the
+function.
++ Step 3: If it is __NOT EMPTY__, then define a variable 'i' and initialize with top.
++ __Display stack[i] value and decrement i value by one (i--)__.
++ Step 3: Repeat above step until i value becomes '0'.
+
+```
+void display()
+{
+    if (top == -1)
+    {
+        printf("Stack is empty");
+    }
+    else
+    {
+        int i;
+        for (i = top; i >= 0; i--)
+        {
+            printf("%d ", stack[i]);
+        }
+    }
+}
+```
+
