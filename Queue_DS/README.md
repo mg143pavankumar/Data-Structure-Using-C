@@ -13,5 +13,6 @@
 + Deletion operation is performed using a function called __"deQueue()"__.
 
 ### Example:
-Queue after inserting 25, 30, 51, 60 and 85.
++ Queue after inserting 25, 30, 51, 60 and 85.
+
 ![image](https://user-images.githubusercontent.com/68140538/102711957-7e5d8680-42e3-11eb-900f-823dcb2ce0f1.png)
