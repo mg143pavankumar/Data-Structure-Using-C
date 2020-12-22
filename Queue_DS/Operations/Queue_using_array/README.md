@@ -31,6 +31,25 @@ steps to insert an element into the queue...
 + Step 2: If it is FULL, then display "Queue is FULL!!! Insertion is not possible!!!" and terminate the function.
 + Step 3: If it is NOT FULL, then increment rear value by one __(rear++)__ and set __queue[rear] = value.__
 
+``` 
+//Function for implementing enqueue -> insertion
+void enqueue(int value){
+    if (rear == (SIZE -1))
+    {
+        printf("\nQueue is full\n");
+    }else
+    {   
+        if (front == -1)
+            front = 0;
+        
+        rear++;
+        Queue[rear] = value;
+
+    }
+    
+}
+
+```
 
 ## deQueue() - Deleting a value from the Queue
 
@@ -43,6 +62,27 @@ possible!!!" and terminate the function.
 both front and rear are equal (front == rear),
 + Step 5:  if it TRUE, then set both front and rear to '-1' __(front = rear = -1)__.
 
+```
+
+//Function for implementing dequeue -> deletion
+void dequeue(){
+    if (front == -1)
+    {
+        printf("Queue is empty.\n");
+    }else{
+        printf("Deleted => %d", Queue[front]);
+        front++;
+
+        if (front > rear)
+        {
+            front = rear = -1;
+        }
+        
+    }
+    
+}
+
+```
 
 ## display() - Displays the elements of a Queue
 We can use the following steps to display the elements of a queue...
@@ -51,4 +91,23 @@ We can use the following steps to display the elements of a queue...
 function.
 + Step 3: If it is NOT EMPTY, then define an integer variable 'i' and set 'i = front+1'.
 + Step 4: Display 'queue[i]' value and increment 'i' value by one (i++). 
-+ Step 5: Repeat the same until 'i' value is equal to rear (i <= rear)
++ Step 5: Repeat the same until 'i' value is equal to rear (i <= rear).
+
+```
+//Functionf for displaying the data
+void display(){
+    if (front == -1)
+    {
+        printf("Queue is empty\n");
+    }else{
+        int i;
+        printf("Queue elements are:\n");
+        for (i = front; i <= rear; i++)
+        {
+            printf("%d ",Queue[i]);
+        }
+        
+    }
+    
+}
+```
