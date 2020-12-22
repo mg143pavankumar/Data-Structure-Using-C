@@ -29,7 +29,7 @@ Syntax: datatype arrayName[size];
 
 ![image](https://user-images.githubusercontent.com/68140538/102698610-be315900-4264-11eb-881e-cffa1d713f39.png)
 
-# Queue
+### Queue
 + Queue is a linear data structure in which the operations are performed based on __FIFO (First In First Out) principle__.
 
 ![image](https://user-images.githubusercontent.com/68140538/102856558-b8966780-444c-11eb-84b6-95c77744c2c5.png)
