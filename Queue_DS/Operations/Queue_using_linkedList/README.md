@@ -20,11 +20,40 @@ make suitable function calls in the main method to perform user selected operati
 
 ## enQueue(value) - Inserting an element into the Queue
 We can use the following steps to insert a new node into the queue...
-+ Step 1: Create a newNode with given value and set 'newNode → next' to NULL.
-+ Step 2: Check whether queue is Empty (rear == NULL)
-+ Step 3: If it is Empty then, set front = newNode and rear = newNode.
-+ Step 4: If it is Not Empty then, set rear → next = newNode and rear = newNode.
++ Step 1: Create a temp node with given value and set __'temp → next' to NULL__.
++ Step 2: Check whether queue is __Empty (rear == NULL)__.
++ Step 3: If it is Empty then, set __front = temp__ and __rear = temp__.
++ Step 4: If it is Not Empty then, set __rear → next = temp__ and __rear = temp__.
 
+```
+//Function for implementing enQueue => insertion
+void enQueue()
+{
+    struct node *temp;
+    temp = (struct node *)malloc(sizeof(struct node));
+
+    printf("Enter the data: ");
+    scanf("%d", &temp->data);
+
+    temp->next = NULL;
+
+    if (front == NULL)
+    {
+        front = temp;
+        rear = temp;
+
+        front -> next = NULL;
+        rear -> next = NULL;
+    }
+    else
+    {
+        rear->next = temp;
+        rear = temp;
+        rear -> next = NULL;
+    }
+}
+
+```
 
 ## deQueue() - Deleting an Element from Queue
 We can use the following steps to delete a node from the queue...
@@ -34,7 +63,27 @@ possible!!!" and terminate from the function
 + Step 3: If it is Not Empty then, define a Node pointer 'temp' and set it to 'front'.
 + Step 4: Then set 'front = front → next' and delete 'temp' (free(temp)).
 
+```
 
+//Function for implementing deQueue => deletion
+void deQueue()
+{
+    struct node *temp;
+    temp = front;
+
+    if (front == NULL)
+    {
+        printf("\nQueue is empty\n");
+    }
+    else{
+        printf("Deleted => %d", temp -> data);
+        front = front -> next;
+        free(temp);
+    }
+    
+}
+
+```
 ## display() - Displaying the elements of Queue
 We can use the following steps to display the elements (nodes) of a queue...
 + Step 1: Check whether queue is Empty (front == NULL).
@@ -44,3 +93,25 @@ with front.
 + Step 4: Display 'temp → data --->' and move it to the next node. Repeat the same
 until 'temp' reaches to 'rear' (temp → next != NULL).
 + Step 4: Finally! Display 'temp → data ---> NULL
+
+```
+//Function for displaying the data
+void display()
+{
+    struct node *temp;
+    temp = front;
+    
+    if (temp == NULL)
+    {
+        printf("Queue is empty\n");
+    }else{
+        while (temp != NULL)
+        {
+            printf("%d ", temp -> data);
+            temp = temp -> next;
+        }
+        
+    }
+    
+}
+```
