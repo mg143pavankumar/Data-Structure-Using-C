@@ -19,7 +19,7 @@ void insertAtEnd();
 int length();
 
 //Function for deleting the node from linked list
-void delete ();
+void delete();
 
 //Function for displaying the node data
 void display();
@@ -56,7 +56,7 @@ int main()
             length();
             break;
         case 5:
-            delete ();
+            delete();
             break;
         case 6:
             display();
