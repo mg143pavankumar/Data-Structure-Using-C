@@ -40,5 +40,8 @@ previous element and next element in the sequence.
 # Circular Linked List:
 + Circular linked list is a sequence of elements in which every element has link to its next element in the 
 sequence and the last element has a link to the first element in the sequence.
++ A circular linked list can be either single linked list or double linked list.
++ For __Single linked list__, next pointer of last node points to the first node.
++ For __Double linked list__, prev pointer of the first node also pointer to last node.
 
 ![image](https://user-images.githubusercontent.com/68140538/102698258-17e45400-4262-11eb-9587-cb481ebaa37b.png)
