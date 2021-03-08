@@ -185,7 +185,7 @@ int length()
 }
 
 //Function for deleting node from a specified location
-void delete ()
+void delete()
 {
     int location, len;
     printf("Enter the locaiton of node to be deleted: ");
